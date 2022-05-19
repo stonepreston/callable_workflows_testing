@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python: ${{ inputs.python }}
+        python: ${{ fromJson(inputs.python) }}
     steps:
       - name: Check out code
         uses: actions/checkout@v2
