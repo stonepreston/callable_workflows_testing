@@ -1,11 +1,11 @@
-name: Lint
+name: Lint-Unit
 
 on:
   workflow_call:
     
 jobs:
-  Lint:
-    name: Lint
+  Lint-Unit:
+    name: Lint-Unit
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,3 +27,5 @@ jobs:
           pip install tox
       - name: Lint
         run: tox -vve lint
+      - name: Unit Tests
+        run: tox -vve unit
