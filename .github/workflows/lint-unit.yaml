@@ -2,10 +2,10 @@ name: Lint-Unit
 
 on:
   workflow_call:
-    
+  
 jobs:
-  Lint-Unit:
-    name: Lint-Unit
+  lint-unit:
+    name: Lint and Unit Tests
     runs-on: ubuntu-latest
     strategy:
       matrix:
